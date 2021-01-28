@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Index.master.cs" Inherits="ASPNetProjectM7.Index" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+       <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+<form id="form1" runat="server">
+        <div>
+            <header>
+                <div class="container-fluid bg-primary d-flex justify-content-right py-3">
+                    <span class="text-white">Inventory Management PROJECT</span>
+                    <span class="text-white">&nbsp || &nbsp</span>
+                    <span class="text-white">Module 7</span>
+                </div>
+            </header>
+            <%--menu bar area--%>
+            <section class="container-fluid bg-dark p-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                                <%--logo--%>
+                                <a href="index.aspx">
+                                    <img class="p-0" src="images/inventory-management-system.jpg" width="250" />
+                                </a>
+
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item active">
+                                            <a class="nav-link text-light" href="index.aspx">Home <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-light" href="login.aspx">Login</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-light" href="registration.aspx">Register</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <%--content area--%>
+            <section class="container-fluid p-0">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </section>
+
+            <%-- footer area--%>
+            <footer class="container-fluid p-0">
+                <div class="bg-primary py-2 d-flex justify-content-center">
+                    <span class="text-white">Design by US-Software L.T.D </span>
+                </div>
+            </footer>
+        </div>
+    </form>
+
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/popper.min.js"></script>
+</body>
+</html>
